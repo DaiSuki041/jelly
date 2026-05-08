@@ -1,0 +1,625 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:black;
+    font-family:'Poppins', sans-serif;
+    overflow-x:hidden;
+    color:white;
+}
+
+/* SECCION */
+
+.mensual-section{
+    width:100%;
+    min-height:100vh;
+    padding:20px 40px;
+    position:relative;
+}
+
+/* LINEA */
+
+.linea-top{
+    position:absolute;
+    top:0;
+    left:0;
+
+    width:100%;
+    height:2px;
+
+    background:white;
+    opacity:0.5;
+}
+
+/* LOGO */
+
+.logo{
+    width:140px;
+
+    margin-top:10px;
+
+    filter:
+    drop-shadow(0 0 10px #ff1493)
+    drop-shadow(0 0 20px #8b5cf6);
+}
+
+/* BOTON PAQUETE */
+
+.paquete-btn{
+    position:absolute;
+
+    top:18px;
+    right:230px;
+
+    background:#ff1493;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:10px 24px;
+
+    border-radius:15px;
+
+    font-family:'Anton', sans-serif;
+
+    font-size:20px;
+
+    transition:0.3s;
+
+    z-index:10;
+}
+
+.paquete-btn:hover{
+
+    background:#ff4dc4;
+
+    transform:translateY(-3px);
+
+    box-shadow:
+    0 0 10px #ff1493,
+    0 0 20px #ff1493;
+}
+
+/* BOTON BURBUJAS */
+
+.burbujas-btn{
+    position:absolute;
+
+    top:10px;
+    right:40px;
+
+    width:140px;
+    height:70px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-decoration:none;
+
+    overflow:hidden;
+}
+
+.burbujas-btn p{
+    position:relative;
+    z-index:2;
+
+    color:white;
+
+    font-weight:bold;
+}
+
+/* BURBUJAS */
+
+.burbuja{
+    position:absolute;
+
+    border-radius:50%;
+
+    background:#ff1493;
+
+    animation:flotar 3s infinite ease-in-out;
+}
+
+.b1{
+    width:55px;
+    height:55px;
+
+    left:5px;
+}
+
+.b2{
+    width:40px;
+    height:40px;
+
+    left:45px;
+    top:8px;
+
+    animation-delay:0.5s;
+}
+
+.b3{
+    width:30px;
+    height:30px;
+
+    right:15px;
+    top:15px;
+
+    animation-delay:1s;
+}
+
+.b4{
+    width:18px;
+    height:18px;
+
+    right:0;
+    top:5px;
+
+    animation-delay:1.5s;
+}
+
+/* ANIMACION */
+
+@keyframes flotar{
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-8px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+
+}
+
+/* TITULO */
+
+.titulo{
+    text-align:center;
+
+    margin-top:-40px;
+}
+
+.titulo h1{
+
+    font-family:'Anton', sans-serif;
+
+    font-size:55px;
+
+    line-height:1.1;
+
+    text-shadow:
+    0 0 10px rgba(255,255,255,0.2);
+}
+
+.titulo h2{
+
+    margin-top:40px;
+
+    font-family:'Anton', sans-serif;
+
+    font-size:45px;
+
+    color:#d9d9d9;
+}
+
+/* CONTENIDO */
+
+.contenido{
+
+    margin-top:40px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    gap:50px;
+}
+
+/* TEXTO */
+
+.texto{
+    max-width:500px;
+}
+
+.texto ul{
+
+    list-style:none;
+}
+
+.texto li{
+
+    margin:22px 0;
+
+    position:relative;
+
+    padding-left:25px;
+
+    font-size:25px;
+
+    font-family:'Anton', sans-serif;
+
+    line-height:1.2;
+}
+
+/* ESTRELLAS */
+
+.texto li::before{
+
+    content:"★";
+
+    position:absolute;
+
+    left:0;
+
+    color:#ff1493;
+
+    text-shadow:
+    0 0 10px #ff1493;
+}
+
+/* SUBTITULO */
+
+.texto h3{
+
+    margin:30px 0 10px;
+
+    text-align:center;
+
+    font-family:'Anton', sans-serif;
+
+    font-size:35px;
+}
+
+/* REDES */
+
+.redes-box{
+
+    margin-left:30px;
+
+    margin-top:15px;
+}
+
+.redes-box p{
+
+    font-family:'Anton', sans-serif;
+
+    font-size:30px;
+
+    margin:10px 0;
+
+    color:white;
+}
+
+/* IMAGEN */
+
+.imagen-box{
+
+    width:450px;
+
+    overflow:hidden;
+}
+
+.imagen-box img{
+
+    width:100%;
+
+    display:block;
+
+    transition:0.5s;
+}
+
+.imagen-box:hover img{
+
+    transform:scale(1.03);
+
+    filter:
+    brightness(1.05)
+    drop-shadow(0 0 10px #ff1493);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1000px){
+
+    .contenido{
+
+        flex-direction:column;
+    }
+
+    .titulo{
+
+        margin-top:40px;
+    }
+
+    .texto li{
+
+        font-size:20px;
+    }
+
+    .titulo h1{
+
+        font-size:40px;
+    }
+
+    .titulo h2{
+
+        font-size:35px;
+    }
+
+}
+
+@media(max-width:600px){
+
+    .mensual-section{
+
+        padding:20px;
+    }
+
+    .logo{
+
+        width:110px;
+    }
+
+    .paquete-btn{
+
+        right:140px;
+
+        transform:scale(0.8);
+    }
+
+    .burbujas-btn{
+
+        right:0;
+
+        transform:scale(0.8);
+    }
+
+    .titulo h1{
+
+        font-size:30px;
+    }
+
+    .titulo h2{
+
+        font-size:28px;
+    }
+
+    .texto li{
+
+        font-size:18px;
+    }
+
+    .redes-box p{
+
+        font-size:22px;
+    }
+
+}
+/* BOTON BURBUJAS */
+
+.bubble-btn{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+
+    display: flex;
+    gap: 10px;
+
+    text-decoration: none;
+    z-index: 1000;
+}
+
+.bubble-btn span{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #ff1493;
+
+    animation: float 2s infinite ease-in-out;
+    box-shadow: 0 0 15px #ff1493;
+}
+
+.bubble-btn span:nth-child(2){
+    animation-delay: .3s;
+}
+
+.bubble-btn span:nth-child(3){
+    animation-delay: .6s;
+}
+
+@keyframes float{
+    0%{
+        transform: translateY(0);
+    }
+
+    50%{
+        transform: translateY(-8px);
+    }
+
+    100%{
+        transform: translateY(0);
+    }
+}
+
+/* CONTENEDOR */
+
+.package-section{
+    width: 100%;
+    min-height: 100vh;
+    padding: 30px 50px;
+}
+
+/* LOGO */
+
+.logo{
+    color: #ff69b4;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+
+    text-shadow: 0 0 10px #ff1493;
+}
+
+/* TITULO */
+
+h1{
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 25px;
+    font-weight: 900;
+}
+
+/* PRECIO */
+
+h2{
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+/* CONTENIDO */
+
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+/* TEXTO */
+
+.info{
+    max-width: 500px;
+}
+
+.main-text{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+h3{
+    margin-bottom: 15px;
+    margin-top: 20px;
+    color: #ffffff;
+}
+
+ul{
+    list-style: none;
+}
+
+ul li{
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    position: relative;
+    padding-left: 25px;
+}
+
+ul li::before{
+    content: "⭐";
+    position: absolute;
+    left: 0;
+    color: #ff1493;
+}
+
+/* REDES */
+
+.socials p{
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+/* BOTON VOLVER */
+
+.back-btn{
+    display: inline-block;
+    margin-top: 30px;
+
+    padding: 12px 25px;
+
+    background: #ff1493;
+    color: white;
+    text-decoration: none;
+    border-radius: 40px;
+
+    font-weight: bold;
+
+    transition: .3s;
+}
+
+.back-btn:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #ff1493;
+}
+
+/* IMAGEN */
+
+.image-box img{
+    width: 350px;
+    border: 3px solid #ff1493;
+
+    box-shadow: 
+    0 0 20px rgba(255, 20, 147, 0.5);
+
+    transition: .4s;
+}
+
+.image-box img:hover{
+    transform: scale(1.02);
+}
+/* CONTACTO */
+
+.contacto{
+
+    margin-top:60px;
+
+    text-align:center;
+}
+
+.contacto h2{
+
+    font-family:'Anton', sans-serif;
+
+    font-size:55px;
+
+    color:#ff1493;
+
+    margin-bottom:20px;
+}
+
+.redes{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:40px;
+
+    flex-wrap:wrap;
+}
+
+.redes p{
+
+    font-size:14px;
+}
+
+.redes span{
+
+    color:#ff1493;
+
+    font-weight:bold;
+}
